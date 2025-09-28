@@ -1,0 +1,123 @@
+
+body{
+    color: azure;
+    background: linear-gradient(#e0e1dd, #778da9,#415a77,#1b263b, #0d1b2a);
+}
+.title {
+    background-color: #0d1b2a;
+    border: 2px solid #778da9;
+    margin: 50px;
+    font-style: italic;
+    display: flex;
+    justify-content: space-around;
+    cursor: default;
+    color: azure;
+}
+
+.menu-item{
+    color: azure;
+    background-color: #526e8d;
+    border: 1.5px solid rgb(2, 2, 2);
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    transition: all 0.25s ease;
+}
+.menu-item:hover{
+    background-color: #1b263b;
+    transform: scale(1.15);       
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(5, 5, 5);
+    font-weight: bold;
+    color: azure;
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    
+}
+    
+.Profil{
+    background-color: #778da9;
+    border: 1.5px solid black;
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 90px;
+    color: azure;
+    
+    
+}
+.BTS{
+    background-color: #778da9;
+    border: 1.5px solid black;
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 90px;
+    margin-top: 30px;
+    color: azure;
+}
+.BTS image{
+    display: flex;
+    justify-content: space-around;
+}
+summary {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    list-style: none;      
+    background-color: #526e8d; 
+    color: rgb(255, 255, 255);                 
+    border: 1.5px solid black;  
+    border-radius: 7px;            
+    cursor: pointer;               
+    font-weight: bold;             
+    transition: all 0.3s ease;    
+}
+
+
+
+summary:hover {
+    background-color: #1b263b;
+    transform: scale(1.05);     
+    color: azure;  
+}
+
+
+details[open] summary {
+    background-color: #1b263b;
+    color: azure;
+}
+.programme_title{
+    display: flex;
+    justify-content: center;
+
+}
+.programme {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+
+
+
+
+
+
+
+/*
+
+}*/
+/*
+0d1b2a
+1b263b
+415a77
+778da9
+e0e1dd*/
