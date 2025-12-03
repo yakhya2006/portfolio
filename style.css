@@ -170,13 +170,18 @@ section {
 
 .skill-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(58, 110, 165, 0.2);
 }
 
 .skill-card i {
     font-size: 3rem;
     margin-bottom: 1rem;
     color: var(--primary-color);
+}
+
+.skill-card span {
+    font-weight: 500;
+    margin-top: 0.5rem;
 }
 
 /* BTS SIO Section */
@@ -224,7 +229,7 @@ section {
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(58, 110, 165, 0.2);
 }
 
 .project-card img {
@@ -327,6 +332,35 @@ section {
 
 .social-links a:hover {
     color: var(--primary-color);
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, background-color 0.3s;
+    z-index: 1000;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #2c5282;
 }
 
 /* Reveal on Scroll Animation */
