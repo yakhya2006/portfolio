@@ -1,0 +1,169 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    --color-primary: #003980;
+    --color-secondary: #5fa3f6;
+    --color-tertiary: #ffeee6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    p{
+        font-size: 1rem;
+    }
+}
+header {
+    display: grid;   /* Donne de la hauteur à la section pour pouvoir centrer */
+    place-items: center;
+
+    h1{
+        color: var(--color-primary);
+        font-weight: bolder;
+        margin: 3rem;
+        font-size: 2.5rem;
+    }
+
+    h2, p{
+        color: var(--color-secondary);
+        margin: 1.5rem;
+        font-weight: bolder;
+    }
+    h2{
+        font-size: 2rem;
+    }
+}
+
+section{
+    display: grid;
+    flex: 1; /* Donne de la hauteur à la section pour pouvoir centrer */
+    place-items: center;
+    article{
+        width: 90%;
+        max-width: 1100px; /* Ne dépasse jamais 800px sur grand écran */
+        padding: 20px;
+        margin: 0 auto;
+        text-align: center;
+        background-color: var(--color-secondary);
+        border-radius: 10px;
+
+
+        div{
+            display: flex;
+            justify-content: center;
+            margin: 0 2vw;
+            color: var(--color-tertiary);
+            font-size: 1.5rem;
+        }
+
+        p{
+            margin: 2rem;
+            color: var(--color-tertiary);
+        }
+        .proposition{
+            color: var(--color-secondary);
+            background-color: var(--color-tertiary);
+            border-radius: 10px;
+            padding:30px 20px;
+            margin: 1vw 2vw;
+            font-size: 2rem;
+            input{
+                border: none;
+                outline: none;
+            }
+        }
+        .zoneSaisis{
+            display: flex; /* Flexbox est souvent plus simple que Grid ici */
+            gap: 10px;
+            border-radius:10px;
+
+            input{
+                border-radius:10px;
+                padding: 1vh 2vw;
+                color: var(--color-secondary);
+                border: none;
+                font-size: 1rem;
+            }
+
+            input:first-child{
+                flex-grow: 1; /* Prend tout l'espace disponible */
+                font-size: 1.2rem; /* Texte lisible */
+                padding: 10px;
+                outline: none;
+            }
+
+            input:last-child{
+                padding: 10px 20px;
+                cursor: pointer;
+                background-color: var(--color-tertiary);
+                color: var(--color-secondary);
+                border: none;
+                transition: background-color 0.3s;
+            }
+
+            input:last-child:hover{
+                background-color: #ccc6c6;
+            }
+        }
+
+        .zoneInfo {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0;
+            width: 100%;
+
+        }
+
+        #timer {
+            font-weight: bold;
+            font-size: 1.5rem; /* On le met en gros */
+            color: var(--color-primary); /* Bleu foncé de ta charte */
+        }
+    }
+
+    .commencer{
+        transition: 0.2s;
+        display: flex;
+        border: none;
+        border-radius: 10px;
+        background-color: var(--color-primary);
+        color: var(--color-tertiary);
+        font-weight: bolder;
+        font-size: 1.2rem;
+        margin-top: 30px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    .commencer:hover{
+        transform: scale(1.1);
+    }
+
+    .stop{
+        transition: 0.2s;
+        color: var(--color-tertiary);
+        background-color: red;
+        margin-top: 30px;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+    }
+    .stop:hover{
+        transform: scale(1.1);
+    }
+}
+
+footer{
+    margin-top: auto; /* Le "propulseur" qui envoie le footer tout en bas */
+    text-align: center;
+    padding: 20px 0;
+    /* Optionnel : ajoute une bordure ou un fond pour bien le voir */
+    background-color: var(--color-secondary);
+}
