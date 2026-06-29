@@ -15,11 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
         toggle?.setAttribute('aria-expanded', 'false');
     }));
 
-    /* Reveal au scroll */
+    /* Reveal au scroll (avec apparition en cascade des éléments frères) */
     const io = new IntersectionObserver((entries, obs) => {
         entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
     }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => {
+        const sibs = [...el.parentElement.children].filter(c => c.classList.contains('reveal'));
+        const i = sibs.indexOf(el);
+        if (i > 0) el.style.setProperty('--reveal-delay', (i * 80) + 'ms');
+        io.observe(el);
+    });
 
     /* Lien de nav actif selon la page courante */
     const here = location.pathname.split('/').pop() || 'index.html';
