@@ -2,206 +2,388 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yakhya TIMURKAEV | Développeur Web Junior</title>
-    <link href="favicon.ico" rel="icon" type="image/x-icon">
-    <link href="style.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-<header class="navbar">
-    <div class="container">
-        <a class="logo" href="#">Y.T.</a>
-        <nav>
+
+<!-- NAVIGATION -->
+<header class="navbar" id="navbar">
+    <div class="container nav-container">
+        <a class="logo" href="#hero">Y.T.</a>
+        <nav id="nav-menu">
             <ul>
                 <li><a href="#hero">Accueil</a></li>
                 <li><a href="#about">À propos</a></li>
                 <li><a href="#skills">Compétences</a></li>
                 <li><a href="#bts-sio">BTS SIO</a></li>
                 <li><a href="#projects">Projets</a></li>
+                <li><a href="#stage">Stage</a></li>
                 <li><a href="#experience">Expériences</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <button aria-label="Ouvrir le menu" class="hamburger">
-            <i class="fas fa-bars"></i>
+        <button class="hamburger" aria-label="Ouvrir le menu">
+            <span></span><span></span><span></span>
         </button>
     </div>
 </header>
 
-<main>
-    <section class="hero" id="hero">
-        <div class="container">
-            <h1 class="reveal-on-scroll">Yakhya TIMURKAEV</h1>
-            <p class="subtitle reveal-on-scroll">Étudiant en 1ère année de BTS SIO - Option SLAM</p>
-            <a class="btn reveal-on-scroll" href="./assets/img/Mon Cv.pdf" target="_blank">Télécharger mon CV</a>
+<!-- HERO -->
+<section class="hero" id="hero">
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+    <div class="hero-orb orb-3"></div>
+    <div class="container hero-content">
+        <p class="hero-eyebrow reveal-on-scroll">Bonjour, je suis</p>
+        <h1 class="hero-name reveal-on-scroll">Yakhya<br><span class="gradient-text">TIMURKAEV</span></h1>
+        <p class="hero-subtitle reveal-on-scroll">
+            <span id="typewriter"></span><span class="cursor">|</span>
+        </p>
+        <div class="hero-ctas reveal-on-scroll">
+            <a class="btn btn-primary" href="./assets/img/Mon Cv.pdf" target="_blank">
+                <i class="fas fa-download"></i> Télécharger mon CV
+            </a>
+            <a class="btn btn-ghost" href="#contact">Me contacter</a>
         </div>
-    </section>
+    </div>
+    <a class="scroll-hint" href="#about" aria-label="Défiler vers le bas">
+        <i class="fas fa-chevron-down"></i>
+    </a>
+</section>
 
-    <section class="about" id="about">
-        <div class="container">
-            <h2 class="section-title reveal-on-scroll">À propos de moi</h2>
-            <p class="reveal-on-scroll">
-                Je m'appelle Yakhya TIMURKAEV, j'ai 19 ans et je suis passionné par la création de solutions numériques.
-                Actuellement en première année de BTS SIO option SLAM, je me spécialise dans le développement
-                d'applications. Mon objectif est de transformer des idées complexes en applications web intuitives et
-                performantes. Curieux et rigoureux, j'aime apprendre et relever de nouveaux défis techniques.
-            </p>
-        </div>
-    </section>
-
-    <section class="skills" id="skills">
-        <div class="container">
-            <h2 class="section-title reveal-on-scroll">Mes compétences</h2>
-            <div class="skills-grid reveal-on-scroll">
-                <div class="skill-card"><i class="fab fa-python"></i><span>Python</span></div>
-                <div class="skill-card"><i class="fab fa-html5"></i><span>HTML</span></div>
-                <div class="skill-card"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
-                <div class="skill-card"><i class="fab fa-js"></i><span>JavaScript</span></div>
-                <div class="skill-card"><i class="fab fa-php"></i><span>PHP</span></div>
-                <div class="skill-card"><i class="fas fa-database"></i><span>MySQL</span></div>
-                <div class="skill-card"><i class="fab fa-git-alt"></i><span>Git</span></div>
+<!-- À PROPOS -->
+<section class="about" id="about">
+    <div class="container">
+        <h2 class="section-title reveal-on-scroll">À <span class="gradient-text">propos</span></h2>
+        <div class="about-grid">
+            <div class="about-text reveal-on-scroll">
+                <p>
+                    Je m'appelle Yakhya TIMURKAEV, j'ai 19 ans et je suis passionné par la création de solutions
+                    numériques. Actuellement en première année de BTS SIO option SLAM, je me spécialise dans le
+                    développement d'applications. Mon objectif : transformer des idées complexes en applications
+                    web intuitives et performantes. Curieux et rigoureux, j'aime apprendre et relever de nouveaux
+                    défis techniques.
+                </p>
             </div>
-        </div>
-    </section>
-
-    <section class="bts-sio" id="bts-sio">
-        <div class="container">
-            <h2 class="section-title reveal-on-scroll">Le BTS SIO</h2>
-            <p class="reveal-on-scroll">
-                Le BTS SIO (Services Informatiques aux Organisations) est une formation de deux ans qui prépare aux
-                métiers
-                de l’informatique, formant des techniciens capables de répondre aux besoins des entreprises en matière
-                de
-                logiciels et d’infrastructures.
-            </p>
-            <div class="options-container reveal-on-scroll">
-                <details class="option-card">
-                    <summary><h3>SLAM</h3></summary>
-                    <p>L'option SLAM (Solutions Logicielles et Applications Métiers) est orientée vers le développement.
-                        Elle forme des profils capables d’analyser des besoins, de concevoir des programmes et de
-                        maintenir des solutions logicielles.</p>
-                </details>
-                <details class="option-card">
-                    <summary><h3>SISR</h3></summary>
-                    <p>L'option SISR (Solutions d’Infrastructure, Systèmes et Réseaux) se concentre sur l’administration
-                        et la sécurisation des réseaux. Elle prépare au rôle d'administrateur systèmes et réseaux.</p>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <section class="projects" id="projects">
-        <div class="container">
-            <h2 class="section-title reveal-on-scroll">Mes projets</h2>
-            <p class="section-subtitle reveal-on-scroll">Voici quelques projets sur lesquels je travaille actuellement
-                pour monter en compétence.</p>
-            <div class="projects-grid reveal-on-scroll">
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>Ce Portfolio</h3>
-                        <p>Le site que vous consultez actuellement, réalisé pour présenter mon profil et mes
-                            compétences.</p>
-                        <span>HTML, CSS, JavaScript</span>
-                    </div>
+            <div class="about-stats reveal-on-scroll">
+                <div class="stat-card">
+                    <span class="stat-number gradient-text">19</span>
+                    <span class="stat-label">ans</span>
                 </div>
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>Site Météo</h3>
-                        <p>Une application web simple pour consulter la météo en temps réel, utilisant une API
-                            externe.</p>
-                        <span>En cours...</span>
-                    </div>
+                <div class="stat-card">
+                    <span class="stat-number gradient-text">BTS</span>
+                    <span class="stat-label">SIO SLAM</span>
                 </div>
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>Générateur de mot de passe</h3>
-                        <p>Un outil en ligne pour créer des mots de passe sécurisés et personnalisables.</p>
-                        <span>En cours...</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <a href="./assets/Vitrine_haloween/tphaloween.html" target="_blank">
-                        <img alt="Vitrine Halloween" src="./assets/img/tphaloween.png"/>
-                    </a>
-                    <div class="project-info">
-                        <h3>Vitrine Halloween</h3>
-                        <p>Un projet réalisé en cours pour découvrir les bases de l'intégration web.</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <a href="https://yakhya2006.github.io/AzerType/" target="_blank">
-                        <img alt="AzerType" src="./assets/img/Azertype.png"/>
-                    </a>
-                    <div class="project-info">
-                        <h3>AzerType</h3>
-                        <p>Un projet réalisé pour s'entrainer en JavaScript</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <a href="https://yakhya2006.github.io/Lunar_Lander/" target="_blank">
-                        <img alt="AzerType" src="./assets/img/LunarLander.png"/>
-                    </a>
-                    <div class="project-info">
-                        <h3>Lunar Lander</h3>
-                        <p>Un projet réalisé en cours afin d'appliqué les compétences en JavaScript</p>
-                    </div>
+                <div class="stat-card">
+                    <span class="stat-number gradient-text">6+</span>
+                    <span class="stat-label">projets</span>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="experience" id="experience">
-        <div class="container">
-            <h2 class="section-title reveal-on-scroll">Expériences professionnelles</h2>
-            <p class="section-subtitle reveal-on-scroll">Bien que mes expériences ne soient pas directement liées à
-                l'informatique, elles m'ont permis de développer des compétences précieuses.</p>
-            <div class="experience-grid reveal-on-scroll">
-                <div class="experience-card">
+<!-- COMPÉTENCES -->
+<section class="skills" id="skills">
+    <div class="container">
+        <h2 class="section-title reveal-on-scroll">Mes <span class="gradient-text">compétences</span></h2>
+        <div class="skills-categories">
+
+            <div class="skill-category reveal-on-scroll">
+                <div class="skill-cat-header">
+                    <span class="skill-cat-dot dot-front"></span>
+                    <span class="skill-cat-label">Front-end</span>
+                </div>
+                <div class="skill-pills">
+                    <div class="skill-pill">
+                        <i class="fab fa-html5"></i><span>HTML</span>
+                    </div>
+                    <div class="skill-pill">
+                        <i class="fab fa-css3-alt"></i><span>CSS</span>
+                    </div>
+                    <div class="skill-pill">
+                        <i class="fab fa-js"></i><span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category reveal-on-scroll">
+                <div class="skill-cat-header">
+                    <span class="skill-cat-dot dot-back"></span>
+                    <span class="skill-cat-label">Back-end</span>
+                </div>
+                <div class="skill-pills">
+                    <div class="skill-pill">
+                        <i class="fab fa-php"></i><span>PHP</span>
+                    </div>
+                    <div class="skill-pill">
+                        <i class="fab fa-python"></i><span>Python</span>
+                    </div>
+                    <div class="skill-pill">
+                        <i class="fas fa-database"></i><span>MySQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category reveal-on-scroll">
+                <div class="skill-cat-header">
+                    <span class="skill-cat-dot dot-tools"></span>
+                    <span class="skill-cat-label">Outils & CMS</span>
+                </div>
+                <div class="skill-pills">
+                    <div class="skill-pill">
+                        <i class="fab fa-git-alt"></i><span>Git</span>
+                    </div>
+                    <div class="skill-pill">
+                        <i class="fab fa-wordpress"></i><span>WordPress</span>
+                    </div>
+                    <div class="skill-pill">
+                        <i class="fab fa-docker"></i><span>Docker</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- BTS SIO -->
+<section class="bts-sio" id="bts-sio">
+    <div class="container">
+        <h2 class="section-title reveal-on-scroll">Le <span class="gradient-text">BTS SIO</span></h2>
+        <p class="section-subtitle reveal-on-scroll">
+            Le BTS SIO (Services Informatiques aux Organisations) prépare en deux ans aux métiers de l'informatique.
+            Deux options, deux orientations distinctes.
+        </p>
+        <div class="bts-grid reveal-on-scroll">
+
+            <div class="bts-card bts-slam active-option">
+                <div class="bts-card-top">
+                    <div class="bts-icon"><i class="fas fa-code"></i></div>
+                    <div>
+                        <span class="bts-badge">Mon option</span>
+                        <h3>SLAM</h3>
+                        <p class="bts-full">Solutions Logicielles et Applications Métiers</p>
+                    </div>
+                </div>
+                <p class="bts-desc">
+                    Orientée développement logiciel. Formation à l'analyse des besoins, la conception de programmes
+                    et la maintenance de solutions applicatives.
+                </p>
+                <ul class="bts-points">
+                    <li><i class="fas fa-arrow-right"></i> Développement web et mobile</li>
+                    <li><i class="fas fa-arrow-right"></i> Bases de données</li>
+                    <li><i class="fas fa-arrow-right"></i> Algorithmique et programmation</li>
+                    <li><i class="fas fa-arrow-right"></i> Gestion de projet SI</li>
+                </ul>
+            </div>
+
+            <div class="bts-card bts-sisr">
+                <div class="bts-card-top">
+                    <div class="bts-icon bts-icon-sisr"><i class="fas fa-network-wired"></i></div>
+                    <div>
+                        <h3>SISR</h3>
+                        <p class="bts-full">Solutions d'Infrastructure, Systèmes et Réseaux</p>
+                    </div>
+                </div>
+                <p class="bts-desc">
+                    Orientée administration systèmes et réseaux. Préparation aux rôles d'administrateur
+                    infrastructure et de technicien réseau.
+                </p>
+                <ul class="bts-points">
+                    <li><i class="fas fa-arrow-right"></i> Administration de serveurs</li>
+                    <li><i class="fas fa-arrow-right"></i> Sécurité des réseaux</li>
+                    <li><i class="fas fa-arrow-right"></i> Virtualisation</li>
+                    <li><i class="fas fa-arrow-right"></i> Gestion des infrastructures</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROJETS -->
+<section class="projects" id="projects">
+    <div class="container">
+        <h2 class="section-title reveal-on-scroll">Mes <span class="gradient-text">projets</span></h2>
+        <p class="section-subtitle reveal-on-scroll">Quelques projets sur lesquels j'ai travaillé pour monter en compétence.</p>
+        <div class="projects-grid reveal-on-scroll">
+
+            <div class="project-card no-img" style="--card-hue: 240deg">
+                <div class="project-fake-img">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="project-info">
+                    <h3>Ce Portfolio</h3>
+                    <p>Le site que vous consultez actuellement, réalisé pour présenter mon profil et mes compétences.</p>
+                    <div class="project-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <a href="./assets/Vitrine_haloween/tphaloween.html" target="_blank" class="project-img-link">
+                    <img src="./assets/img/tphaloween.png" alt="Vitrine Halloween">
+                    <div class="project-overlay">
+                        <span><i class="fas fa-external-link-alt"></i> Voir le projet</span>
+                    </div>
+                </a>
+                <div class="project-info">
+                    <h3>Vitrine Halloween</h3>
+                    <p>Un projet réalisé en cours pour découvrir les bases de l'intégration web.</p>
+                    <div class="project-tags">
+                        <span>HTML</span><span>CSS</span><span>JS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <a href="https://yakhya2006.github.io/AzerType/" target="_blank" rel="noopener noreferrer" class="project-img-link">
+                    <img src="./assets/img/Azertype.png" alt="AzerType">
+                    <div class="project-overlay">
+                        <span><i class="fas fa-external-link-alt"></i> Voir le projet</span>
+                    </div>
+                </a>
+                <div class="project-info">
+                    <h3>AzerType</h3>
+                    <p>Application de dactylographie pour s'entraîner à taper vite, réalisée en JavaScript.</p>
+                    <div class="project-tags">
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <a href="https://yakhya2006.github.io/Lunar_Lander/" target="_blank" rel="noopener noreferrer" class="project-img-link">
+                    <img src="./assets/img/LunarLander.png" alt="Lunar Lander">
+                    <div class="project-overlay">
+                        <span><i class="fas fa-external-link-alt"></i> Voir le projet</span>
+                    </div>
+                </a>
+                <div class="project-info">
+                    <h3>Lunar Lander</h3>
+                    <p>Jeu de simulation d'atterrissage lunaire, réalisé pour pratiquer JavaScript.</p>
+                    <div class="project-tags">
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- STAGE -->
+<section class="stage" id="stage">
+    <div class="container">
+        <h2 class="section-title reveal-on-scroll">Mon <span class="gradient-text">stage</span></h2>
+        <p class="section-subtitle reveal-on-scroll">Mission principale : refonte du site web de l'entreprise.</p>
+        <div class="stage-card reveal-on-scroll">
+            <div class="stage-card-header">
+                <div class="stage-badge">Stage BTS SIO · 2026</div>
+                <h3>Refonte du site <span class="gradient-text">Avalon</span></h3>
+                <p class="stage-company">Avalon — Terres de Jeux et d'Utopies · Le Landreau (44)</p>
+            </div>
+            <div class="stage-card-body">
+                <p>
+                    Refonte complète du site web de l'association Avalon, terrain d'airsoft et d'activités outdoor,
+                    en passant de Wix à un site WordPress sur-mesure. J'ai développé un thème PHP custom avec
+                    Advanced Custom Fields (gratuit) pour que le responsable puisse modifier le contenu sans
+                    toucher au code. Le site est hébergé sur un VPS OVH via Docker.
+                </p>
+                <ul class="stage-details">
+                    <li><i class="fas fa-check-circle"></i> Thème WordPress entièrement codé à la main (PHP)</li>
+                    <li><i class="fas fa-check-circle"></i> Champs éditables via ACF (logo, hero, coordonnées, réseaux)</li>
+                    <li><i class="fas fa-check-circle"></i> 4 types de contenu personnalisés : Activités, Tarifs, Sessions, Terrains</li>
+                    <li><i class="fas fa-check-circle"></i> Déploiement Docker sur VPS OVH</li>
+                </ul>
+                <div class="stage-footer">
+                    <div class="stage-tags">
+                        <span>WordPress</span><span>PHP</span><span>ACF</span><span>MySQL</span><span>Docker</span>
+                    </div>
+                    <a class="btn btn-primary stage-link" href="http://51.210.100.177/" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i> Voir le site
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EXPÉRIENCES -->
+<section class="experience" id="experience">
+    <div class="container">
+        <h2 class="section-title reveal-on-scroll">Expériences <span class="gradient-text">professionnelles</span></h2>
+        <p class="section-subtitle reveal-on-scroll">
+            Des expériences qui m'ont permis de développer rigueur, sens du service et capacité d'adaptation.
+        </p>
+        <div class="timeline reveal-on-scroll">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
                     <h3>Vendeur en magasin alimentaire</h3>
-                    <p>Ce poste m'a permis de développer d'excellentes compétences en communication, le sens du service
-                        client et une grande rigueur dans la gestion des tâches quotidiennes.</p>
+                    <p>Ce poste m'a permis de développer d'excellentes compétences en communication, le sens du
+                        service client et une grande rigueur dans la gestion des tâches quotidiennes.</p>
                 </div>
-                <div class="experience-card">
-                    <h3>Stagiaire polyvalent (Casino, Chaussea)</h3>
-                    <p>Mes stages m'ont offert une vision complète du fonctionnement d'une entreprise, de la logistique
-                        à la vente, renforçant ma capacité d'adaptation et mon esprit d'équipe.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <h3>Stagiaire polyvalent</h3>
+                    <p class="timeline-company">Casino, Chaussea</p>
+                    <p>Mes stages m'ont offert une vision complète du fonctionnement d'une entreprise, de la
+                        logistique à la vente, renforçant ma capacité d'adaptation et mon esprit d'équipe.</p>
                 </div>
             </div>
         </div>
-    </section>
-</main>
+    </div>
+</section>
 
+<!-- CONTACT -->
 <footer class="contact" id="contact">
     <div class="container">
-        <h2 class="section-title reveal-on-scroll">Contact</h2>
+        <h2 class="section-title reveal-on-scroll">Me <span class="gradient-text">contacter</span></h2>
         <p class="reveal-on-scroll">N'hésitez pas à me contacter pour toute question ou opportunité.</p>
         <div class="contact-info reveal-on-scroll">
-            <div class="email-contact">
-                <a href="mailto:yakhyatimurkaev2006@gmail.com?subject=Contact%20depuis%20le%20site&body=Bonjour%20%2C%0A%0AJ'aimerais%20vous%20contacter%20pour%20...">
-                    <i class="fas fa-envelope"></i> yakhyatimurkaev2006@gmail.com
+            <div class="contact-item email-contact">
+                <a href="mailto:yakhyatimurkaev2006@gmail.com?subject=Contact%20depuis%20le%20site&body=Bonjour%2C%0A%0AJ'aimerais%20vous%20contacter%20pour%20...">
+                    <i class="fas fa-envelope"></i>
+                    yakhyatimurkaev2006@gmail.com
                 </a>
-                <button aria-label="Copier l'email" class="copy-email-btn">
+                <button class="copy-email-btn" aria-label="Copier l'email">
                     <i class="fas fa-copy"></i>
                 </button>
             </div>
-            <span><i class="fas fa-phone"></i> 07 49 49 00 12</span>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>07 49 49 00 12</span>
+            </div>
         </div>
         <div class="social-links reveal-on-scroll">
-            <a href="https://github.com/yakhya2006" rel="noopener noreferrer" target="_blank"><i
-                    class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/yakhya-timurkaev-7730032ba" rel="noopener noreferrer"
-               target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/yakhya2006" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/yakhya-timurkaev-7730032ba" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
         </div>
+        <p class="footer-copy">© 2026 Yakhya TIMURKAEV</p>
     </div>
 </footer>
 
-<a aria-label="Retour en haut" class="back-to-top" href="#"><i class="fas fa-arrow-up"></i></a>
+<a class="back-to-top" href="#" aria-label="Retour en haut">
+    <i class="fas fa-arrow-up"></i>
+</a>
 
-<script src="./portfolio.js"></script>
+<script src="portfolio.js"></script>
 </body>
 </html>

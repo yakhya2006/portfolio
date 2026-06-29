@@ -1,149 +1,114 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Animation de révélation au défilement
-    const elementsToReveal = document.querySelectorAll('.reveal-on-scroll');
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
 
-    function handleIntersection(entries, observer) {
+    /* ---- Typewriter ---- */
+    const typewriterEl = document.getElementById('typewriter');
+    const phrases = [
+        'Étudiant BTS SIO — Option SLAM',
+        'Développeur Web Junior',
+        'Passionné par le code',
+    ];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+    let paused = false;
+
+    function typewrite() {
+        if (paused) return;
+        const current = phrases[phraseIndex];
+        if (deleting) {
+            typewriterEl.textContent = current.slice(0, charIndex--);
+            if (charIndex < 0) {
+                deleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                paused = true;
+                setTimeout(() => { paused = false; typewrite(); }, 400);
+                return;
+            }
+            setTimeout(typewrite, 45);
+        } else {
+            typewriterEl.textContent = current.slice(0, charIndex++);
+            if (charIndex > current.length) {
+                paused = true;
+                setTimeout(() => { deleting = true; paused = false; typewrite(); }, 2200);
+                return;
+            }
+            setTimeout(typewrite, 70);
+        }
+    }
+    typewrite();
+
+    /* ---- Scroll reveal ---- */
+    const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
+                obs.unobserve(entry.target);
             }
         });
-    }
+    }, { threshold: 0.1 });
 
-    const observer = new IntersectionObserver(handleIntersection, observerOptions);
-    elementsToReveal.forEach(element => {
-        observer.observe(element);
-    });
+    document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
 
-    // Mise en évidence du lien de navigation actif
-    const navLinks = document.querySelectorAll('.navbar nav ul li a');
-    const sections = document.querySelectorAll('section[id]');
-
-    const navObserverOptions = {
-        root: null,
-        rootMargin: '-50% 0px -50% 0px', // Active when section is in the middle of the viewport
-        threshold: 0
-    };
-
-    const navObserver = new IntersectionObserver((entries) => {
+    /* ---- Active nav link ---- */
+    const navLinks = document.querySelectorAll('#nav-menu ul li a');
+    const navObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const id = entry.target.getAttribute('id');
+                const id = entry.target.id;
                 navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${id}`) {
-                        link.classList.add('active');
-                    }
+                    link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
                 });
             }
         });
-    }, navObserverOptions);
+    }, { rootMargin: '-50% 0px -50% 0px' });
 
-    sections.forEach(section => {
-        navObserver.observe(section);
-    });
+    document.querySelectorAll('section[id], footer[id]').forEach(s => navObserver.observe(s));
 
-    // Masquer/afficher la barre de navigation au défilement
-    let lastScrollY = window.scrollY;
-    const navbar = document.querySelector('.navbar');
+    /* ---- Hide / show navbar on scroll ---- */
+    const navbar = document.getElementById('navbar');
+    let lastY = window.scrollY;
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > lastScrollY && window.scrollY > navbar.offsetHeight) {
-            // Défilement vers le bas
-            navbar.style.top = `-${navbar.offsetHeight}px`;
-        } else {
-            // Défilement vers le haut
-            navbar.style.top = '0';
-        }
-        lastScrollY = window.scrollY;
+        const y = window.scrollY;
+        navbar.style.top = (y > lastY && y > navbar.offsetHeight) ? `-${navbar.offsetHeight}px` : '0';
+        lastY = y;
     });
 
-    // Menu hamburger pour mobile
+    /* ---- Hamburger ---- */
     const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.navbar nav');
+    const navMenu   = document.getElementById('nav-menu');
 
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
+    hamburger?.addEventListener('click', () => navMenu.classList.toggle('active'));
+    navLinks.forEach(link => link.addEventListener('click', () => navMenu.classList.remove('active')));
 
-        // Fermer le menu en cliquant sur un lien
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (navMenu.classList.contains('active')) {
-                    navMenu.classList.remove('active');
-                }
+    /* ---- Copy email ---- */
+    const copyBtn = document.querySelector('.copy-email-btn');
+    copyBtn?.addEventListener('click', () => {
+        navigator.clipboard.writeText('yakhyatimurkaev2006@gmail.com').then(() => {
+            const icon = copyBtn.querySelector('i');
+            icon.classList.replace('fa-copy', 'fa-check');
+
+            const tip = document.createElement('span');
+            tip.textContent = 'Copié !';
+            Object.assign(tip.style, {
+                position: 'absolute', bottom: '130%', left: '50%',
+                transform: 'translateX(-50%)', background: 'var(--primary-deep)',
+                color: '#fff', padding: '0.25rem 0.6rem', borderRadius: '6px',
+                fontSize: '0.8rem', whiteSpace: 'nowrap', pointerEvents: 'none',
             });
+            copyBtn.style.position = 'relative';
+            copyBtn.appendChild(tip);
+
+            setTimeout(() => {
+                icon.classList.replace('fa-check', 'fa-copy');
+                tip.remove();
+            }, 2000);
         });
-    }
+    });
 
-    // Fonctionnalité de copie de l'email
-    const copyEmailBtn = document.querySelector('.copy-email-btn');
-    if (copyEmailBtn) {
-        copyEmailBtn.addEventListener('click', () => {
-            const email = 'yakhyatimurkaev2006@gmail.com';
-            navigator.clipboard.writeText(email).then(() => {
-                const icon = copyEmailBtn.querySelector('i');
-                const originalAriaLabel = copyEmailBtn.getAttribute('aria-label');
-                if (icon) {
-                    icon.classList.remove('fa-copy');
-                    icon.classList.add('fa-check');
-                    copyEmailBtn.setAttribute('aria-label', 'Email copié !');
+    /* ---- Back to top ---- */
+    const backBtn = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => backBtn?.classList.toggle('visible', window.scrollY > 300));
+    backBtn?.addEventListener('click', e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
-                    // Créer une petite pop-up de confirmation
-                    const confirmation = document.createElement('span');
-                    confirmation.innerText = 'Copié !';
-                    confirmation.style.position = 'absolute';
-                    confirmation.style.bottom = '125%';
-                    confirmation.style.left = '50%';
-                    confirmation.style.transform = 'translateX(-50%)';
-                    confirmation.style.background = 'var(--primary-color)';
-                    confirmation.style.color = '#fff';
-                    confirmation.style.padding = '0.3rem 0.6rem';
-                    confirmation.style.borderRadius = '5px';
-                    confirmation.style.fontSize = '0.9rem';
-                    confirmation.style.whiteSpace = 'nowrap';
-                    copyEmailBtn.appendChild(confirmation);
-
-                    setTimeout(() => {
-                        icon.classList.remove('fa-check');
-                        icon.classList.add('fa-copy');
-                        copyEmailBtn.setAttribute('aria-label', originalAriaLabel);
-                        if (copyEmailBtn.contains(confirmation)) {
-                            copyEmailBtn.removeChild(confirmation);
-                        }
-                    }, 2000);
-                }
-            }).catch(err => {
-                console.error("Impossible de copier l'email : ", err);
-                alert("Impossible de copier l'email. Vous pouvez le copier manuellement : yakhyatimurkaev2006@gmail.com");
-            });
-        });
-    }
-
-    // Back to top button
-    const backToTopButton = document.querySelector('.back-to-top');
-    if (backToTopButton) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopButton.classList.add('visible');
-            } else {
-                backToTopButton.classList.remove('visible');
-            }
-        });
-
-        backToTopButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
 });
