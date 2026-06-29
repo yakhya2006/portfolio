@@ -43,6 +43,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    /* Difficultés : bascule version courte / détaillée */
+    const pbToggle = document.querySelector('.pb-toggle');
+    const pbList   = document.getElementById('problems-list');
+    pbToggle?.addEventListener('click', () => {
+        const expanded = pbList.classList.toggle('expanded');
+        pbToggle.setAttribute('aria-expanded', String(expanded));
+        const label = pbToggle.querySelector('.pb-toggle-label');
+        if (label) label.textContent = expanded ? 'Masquer le détail' : 'Voir le détail';
+    });
+
     /* Retour haut */
     const top = document.querySelector('.to-top');
     if (top) {

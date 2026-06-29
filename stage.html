@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-<a class="skip-link" href="#mission">Aller au contenu</a>
+<a class="skip-link" href="#contexte">Aller au contenu</a>
 
 <!-- NAV -->
 <header class="nav">
@@ -39,29 +39,8 @@
         </div>
     </section>
 
-    <!-- EN-TÊTE STAGE -->
-    <section id="mission">
-        <div class="wrap">
-            <div class="stage-head reveal">
-                <div class="badge-row">
-                    <span class="tag-pill live">Stage BTS SIO · 2026</span>
-                    <span class="tag-pill"><i class="fab fa-wordpress"></i> WordPress sur-mesure</span>
-                    <span class="tag-pill"><i class="fas fa-arrow-right-arrow-left"></i> Migration Wix → WordPress</span>
-                    <span class="tag-pill"><i class="fab fa-docker"></i> Docker · OVH</span>
-                </div>
-                <h2>Refonte du site de l'association <em>Avalon</em></h2>
-                <p class="role-line">Stagiaire développeur web · <strong>Avalon — Terres de Jeux et d'Utopies</strong> · Le Landreau (44) · 25 mai → 27 juin 2026</p>
-                <div class="stage-figs">
-                    <div class="metric"><span class="n grad-text">5 sem.</span><span class="l">durée du stage</span></div>
-                    <div class="metric"><span class="n grad-text">4</span><span class="l">types de contenu éditables</span></div>
-                    <div class="metric"><span class="n grad-text">0€</span><span class="l">d'abonnement (vs Wix)</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- CONTEXTE -->
-    <section id="contexte" style="padding-top:0;">
+    <section id="contexte">
         <div class="wrap">
             <div class="sec-head reveal">
                 <p class="eyebrow" data-num="01">Le contexte</p>
@@ -97,7 +76,7 @@
                 <h3><i class="fas fa-bullseye"></i> Ma mission</h3>
                 <p>
                     Refaire le site d'Avalon en quittant Wix pour un WordPress que l'équipe gère seule,
-                    sans toucher au code. J'ai recodé le site à la main (HTML, CSS, JS), puis l'ai transformé
+                    sans toucher au code. J'ai recodé le site en HTML, CSS et JS, puis l'ai transformé
                     en thème WordPress sur-mesure. Avec ACF et des types de contenu personnalisés, chaque texte
                     et image reste modifiable depuis l'administration. Déployé avec Docker sur un VPS OVH.
                 </p>
@@ -142,7 +121,7 @@
                         <span class="comp-num">03</span>
                         <h3>Développement du site en HTML, CSS et JavaScript</h3>
                     </div>
-                    <p>Site codé à la main, responsive, pour qu'il tienne sur mobile comme sur ordinateur.</p>
+                    <p>Site développé en HTML, CSS et JavaScript, responsive, pour qu'il tienne sur mobile comme sur ordinateur.</p>
                     <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
                 </article>
 
@@ -173,32 +152,32 @@
                 <article class="comp-block reveal">
                     <div class="comp-block-head">
                         <span class="comp-num">06</span>
-                        <h3>Mise en production</h3>
-                    </div>
-                    <p>Déploiement avec Docker sur un VPS OVH, accès remis au client. Vérifié que tout tournait sur le serveur, pas seulement sur ma machine.</p>
-                    <div class="project-tags"><span>Docker</span><span>VPS OVH</span></div>
-                </article>
-
-                <!-- M7 -->
-                <article class="comp-block reveal">
-                    <div class="comp-block-head">
-                        <span class="comp-num">07</span>
                         <h3>Recette et corrections avec le client</h3>
                     </div>
                     <p>Fiche de recette : le client teste, remonte ses retours, je corrige jusqu'à validation.</p>
                     <div class="project-tags"><span>Fiche de recette</span><span>Correctifs</span></div>
                 </article>
 
-                <!-- M8 -->
-                <article class="comp-block reveal">
-                    <div class="comp-block-head">
-                        <span class="comp-num">08</span>
-                        <h3>Veille et développement professionnel</h3>
-                    </div>
-                    <p>Veille sur WordPress, ACF et Docker. Ce portfolio et mon GitHub en font partie.</p>
-                    <div class="project-tags"><span>Veille</span><span>Portfolio</span><span>GitHub</span></div>
-                </article>
+            </div>
 
+            <!-- APERÇU : édition de contenu -->
+            <div class="shots-head reveal">
+                <h3>Concrètement, voici comment l'équipe édite son site.</h3>
+                <p>L'équipe remplit un formulaire dans l'administration, et la carte d'activité se met à jour toute seule sur le site — sans toucher au code.</p>
+            </div>
+            <div class="shots reveal">
+                <figure class="shot">
+                    <img src="assets/img/avalon-admin-form.png" alt="Formulaire ACF d'édition d'une activité dans l'administration WordPress" loading="lazy">
+                    <figcaption><strong>1. Le formulaire ACF</strong> — l'équipe remplit des champs simples (titre, description, badge, points clés…).</figcaption>
+                </figure>
+                <figure class="shot">
+                    <img src="assets/img/avalon-front-carte.png" alt="Carte d'activité Airsoft générée sur le site Avalon" loading="lazy">
+                    <figcaption><strong>2. Le résultat sur le site</strong> — la carte d'activité s'affiche automatiquement, mise en page comprise.</figcaption>
+                </figure>
+                <figure class="shot wide">
+                    <img src="assets/img/avalon-admin-dashboard.png" alt="Tableau de bord de l'administration WordPress du site Avalon" loading="lazy">
+                    <figcaption><strong>L'administration</strong> — le tableau de bord WordPress remis à l'équipe, avec ses types de contenu sur-mesure (Activités, Tarifs, Sessions, Terrains).</figcaption>
+                </figure>
             </div>
         </div>
     </section>
@@ -208,60 +187,104 @@
         <div class="wrap">
             <div class="sec-head reveal">
                 <p class="eyebrow" data-num="03">Difficultés rencontrées</p>
-                <h2 class="sec-title">Là où ça a coincé.</h2>
-                <p class="sec-intro">Trois moments où j'ai dû m'arrêter, réfléchir et changer d'approche.</p>
+                <h2 class="sec-title">Les obstacles rencontrés.</h2>
+                <p class="sec-intro">Quatre situations qui m'ont demandé de prendre du recul et d'adapter ma méthode.</p>
             </div>
 
-            <div class="problems">
+            <div class="pb-controls reveal">
+                <p class="pb-hint">Voici la version courte. Ouvrez le détail si vous voulez le déroulé complet de chaque situation.</p>
+                <button type="button" class="btn btn-line pb-toggle" aria-expanded="false" aria-controls="problems-list">
+                    <span class="pb-toggle-label">Voir le détail</span> <i class="fas fa-chevron-down pb-chevron"></i>
+                </button>
+            </div>
+
+            <div class="problems" id="problems-list">
 
                 <!-- PB 1 -->
                 <article class="problem-card reveal">
                     <h3><i class="fas fa-mobile-screen-button"></i> Un design impossible à rendre responsive</h3>
-                    <div class="pb-block">
-                        <span class="k pb">Le problème</span>
-                        <p>Le design fourni était fait uniquement d'images. Impossible à adapter : sur téléphone, tout débordait, car une image ne se réorganise pas comme du HTML.</p>
-                    </div>
-                    <div class="pb-block">
-                        <span class="k sol">Ma réponse</span>
-                        <p>J'ai proposé de refaire la mise en page en HTML/CSS. La responsivité comptait plus pour eux que de coller au pixel près à la maquette.</p>
-                    </div>
-                    <div class="pb-block learn">
-                        <span class="k learn">Ce que j'en retire</span>
-                        <p>Une maquette doit être réalisable et utilisable sur tous les écrans, pas seulement jolie.</p>
+                    <div class="pb-summary-wrap"><p class="pb-summary">Le design livré n'était que des images, impossible à adapter sur mobile. J'ai refait la mise en page en HTML/CSS pour qu'elle tienne sur tous les écrans.</p></div>
+                    <div class="pb-detail">
+                        <div class="pb-detail-inner">
+                        <div class="pb-block">
+                            <span class="k pb">Le problème</span>
+                            <p>Le design fourni était fait uniquement d'images. Impossible à adapter : sur téléphone, tout débordait, car une image ne se réorganise pas comme du HTML.</p>
+                        </div>
+                        <div class="pb-block">
+                            <span class="k sol">Ma réponse</span>
+                            <p>J'ai proposé de refaire la mise en page en HTML/CSS. La responsivité comptait plus pour eux que de coller au pixel près à la maquette.</p>
+                        </div>
+                        <div class="pb-block learn">
+                            <span class="k learn">Ce que j'en retire</span>
+                            <p>Une maquette doit être réalisable et utilisable sur tous les écrans, pas seulement jolie.</p>
+                        </div>
+                        </div>
                     </div>
                 </article>
 
                 <!-- PB 2 -->
                 <article class="problem-card reveal">
                     <h3><i class="fas fa-puzzle-piece"></i> Rendre le site modifiable par l'équipe : Elementor ou ACF ?</h3>
-                    <div class="pb-block">
-                        <span class="k pb">Le problème</span>
-                        <p>L'équipe voulait modifier le site elle-même, comme sur Wix, en déplaçant les éléments comme des briques. On a d'abord tenté Elementor, mais c'est lourd et exige de bien le maîtriser.</p>
-                    </div>
-                    <div class="pb-block">
-                        <span class="k sol">Ma réponse</span>
-                        <p>Passage à ACF : je code le site, l'équipe modifie le contenu via des formulaires simples, avec des gabarits prédéfinis. <span class="who">J'ai été épaulé par un étudiant en fin de 2ᵉ année de BTS SIO SLAM.</span></p>
-                    </div>
-                    <div class="pb-block learn">
-                        <span class="k learn">Ce que j'en retire</span>
-                        <p>L'outil le plus impressionnant n'est pas toujours le bon. ACF, plus léger, répondait mieux au besoin.</p>
+                    <div class="pb-summary-wrap"><p class="pb-summary">L'équipe voulait pouvoir gérer son site elle-même, comme elle le faisait sur Wix. Elementor s'est vite révélé trop lourd, alors je suis parti sur ACF : je code les gabarits, et l'équipe n'a plus qu'à remplir des formulaires. Sur cette partie, un étudiant de BTS SIO SLAM m'a donné un coup de main.</p></div>
+                    <div class="pb-detail">
+                        <div class="pb-detail-inner">
+                        <div class="pb-block">
+                            <span class="k pb">Le problème</span>
+                            <p>L'équipe voulait modifier le site elle-même, comme sur Wix, en déplaçant les éléments comme des briques. On a d'abord tenté Elementor, mais c'est lourd et exige de bien le maîtriser.</p>
+                        </div>
+                        <div class="pb-block">
+                            <span class="k sol">Ma réponse</span>
+                            <p>Passage à ACF : je code le site, l'équipe modifie le contenu via des formulaires simples, avec des gabarits prédéfinis. <span class="who">J'ai été épaulé par un étudiant en fin de 2ᵉ année de BTS SIO SLAM.</span></p>
+                        </div>
+                        <div class="pb-block learn">
+                            <span class="k learn">Ce que j'en retire</span>
+                            <p>L'outil le plus impressionnant n'est pas toujours le bon. ACF, plus léger, répondait mieux au besoin.</p>
+                        </div>
+                        </div>
                     </div>
                 </article>
 
                 <!-- PB 3 -->
                 <article class="problem-card reveal">
+                    <h3><i class="fas fa-robot"></i> Un projet au-dessus de mon niveau de départ</h3>
+                    <div class="pb-summary-wrap"><p class="pb-summary">Le thème WordPress sur-mesure dépassait largement mon niveau de début de stage. Je me suis appuyé sur l'IA (Claude) pour comprendre et progresser au fil du projet, sans m'en servir comme d'un raccourci.</p></div>
+                    <div class="pb-detail">
+                        <div class="pb-detail-inner">
+                        <div class="pb-block">
+                            <span class="k pb">Le problème</span>
+                            <p>L'intégration en thème WordPress sur-mesure (PHP, ACF, types de contenu personnalisés) dépassait ce que je savais faire en début de stage. Je n'avais jamais travaillé sur ce type de projet et je ne maîtrisais pas encore assez le code.</p>
+                        </div>
+                        <div class="pb-block">
+                            <span class="k sol">Ma réponse</span>
+                            <p>Je me suis appuyé sur l'IA (notamment Claude) pour comprendre, débloquer et apprendre au fil du projet : je faisais générer des pistes, je les lisais, je les adaptais à notre cas, puis je les testais jusqu'à comprendre comment ça fonctionnait.</p>
+                        </div>
+                        <div class="pb-block learn">
+                            <span class="k learn">Ce que j'en retire</span>
+                            <p>Savoir s'appuyer sur les bons outils pour monter en compétence vite fait partie du métier. L'IA m'a servi de tuteur pour apprendre, pas de raccourci pour éviter de comprendre.</p>
+                        </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PB 4 -->
+                <article class="problem-card reveal">
                     <h3><i class="fas fa-comments"></i> Apprendre à me faire comprendre</h3>
-                    <div class="pb-block">
-                        <span class="k pb">Le problème</span>
-                        <p>Ma plus grosse difficulté était la communication : j'allais trop vite pour expliquer ce que j'avais en tête.</p>
-                    </div>
-                    <div class="pb-block">
-                        <span class="k sol">Ma réponse</span>
-                        <p>Mon responsable m'a aidé : « un client ne doit jamais avoir à deviner ce que tu lui dis ». J'ai appris à ralentir et à reformuler.</p>
-                    </div>
-                    <div class="pb-block learn">
-                        <span class="k learn">Ce que j'en retire</span>
-                        <p>Savoir coder ne suffit pas, il faut se faire comprendre. C'est ce sur quoi j'ai le plus progressé.</p>
+                    <div class="pb-summary-wrap"><p class="pb-summary">Ma vraie difficulté, c'était la communication : j'allais trop vite. Mon responsable m'a appris à ralentir et à reformuler pour qu'un client n'ait jamais à deviner.</p></div>
+                    <div class="pb-detail">
+                        <div class="pb-detail-inner">
+                        <div class="pb-block">
+                            <span class="k pb">Le problème</span>
+                            <p>Ma plus grosse difficulté était la communication : j'allais trop vite pour expliquer ce que j'avais en tête.</p>
+                        </div>
+                        <div class="pb-block">
+                            <span class="k sol">Ma réponse</span>
+                            <p>Mon responsable m'a aidé : « un client ne doit jamais avoir à deviner ce que tu lui dis ». J'ai appris à ralentir et à reformuler.</p>
+                        </div>
+                        <div class="pb-block learn">
+                            <span class="k learn">Ce que j'en retire</span>
+                            <p>Savoir coder ne suffit pas, il faut se faire comprendre. C'est ce sur quoi j'ai le plus progressé.</p>
+                        </div>
+                        </div>
                     </div>
                 </article>
 
@@ -279,13 +302,14 @@
             </div>
             <div class="stack-grid">
                 <div class="stack-card reveal"><span class="k">CMS</span><span class="v">WordPress</span></div>
-                <div class="stack-card reveal"><span class="k">Thème</span><span class="v">Custom (codé main)</span><span class="note">PHP — pas de constructeur visuel</span></div>
+                <div class="stack-card reveal"><span class="k">Thème</span><span class="v">Custom (codé)</span><span class="note">PHP — pas de constructeur visuel</span></div>
                 <div class="stack-card reveal"><span class="k">Contenus éditables</span><span class="v">ACF (gratuit)</span><span class="note">+ Custom Post Types</span></div>
                 <div class="stack-card reveal"><span class="k">Types de contenu</span><span class="v">Activités · Tarifs · Sessions · Terrains</span><span class="note">4 types sur-mesure</span></div>
                 <div class="stack-card reveal"><span class="k">Langages</span><span class="v">HTML · CSS · JavaScript · PHP</span></div>
                 <div class="stack-card reveal"><span class="k">Maquettes</span><span class="v">Figma</span></div>
                 <div class="stack-card reveal"><span class="k">Versionnage</span><span class="v">Git</span></div>
                 <div class="stack-card reveal"><span class="k">Hébergement</span><span class="v">VPS OVH</span><span class="note">Conteneurisé avec Docker</span></div>
+                <div class="stack-card reveal"><span class="k">Assistance IA</span><span class="v">Claude</span><span class="note">Aide au code &amp; montée en compétence</span></div>
             </div>
         </div>
     </section>
@@ -306,34 +330,10 @@
                 <div class="metric reveal"><span class="n grad-text">&lt; 1,5 Mo</span><span class="l">poids de l'accueil</span></div>
                 <div class="metric reveal"><span class="n grad-text">WCAG</span><span class="l">accessibilité visée</span></div>
             </div>
-        </div>
-    </section>
-
-    <!-- LIVRABLES -->
-    <section id="livrables">
-        <div class="wrap">
-            <div class="sec-head reveal">
-                <p class="eyebrow" data-num="06">Livrables</p>
-                <h2 class="sec-title">Ce que j'ai remis.</h2>
-            </div>
-            <div class="deliv-grid">
-                <div class="deliv-card reveal">
-                    <h3><i class="fas fa-code"></i> Techniques</h3>
-                    <ul>
-                        <li>Code source du thème WordPress sur-mesure</li>
-                        <li>Site installé et configuré en production</li>
-                        <li>Accès administrateur + hébergeur remis au client</li>
-                        <li>Sauvegarde complète (fichiers + base de données)</li>
-                    </ul>
-                </div>
-                <div class="deliv-card reveal">
-                    <h3><i class="fas fa-file-lines"></i> Documentaires</h3>
-                    <ul>
-                        <li>Cahier des charges</li>
-                        <li>Documentation utilisateur (PDF illustré)</li>
-                    </ul>
-                </div>
-            </div>
+            <figure class="shot wide reveal" style="margin-top:1.8rem;">
+                <img src="assets/img/avalon-perf-reseau.png" alt="Outils réseau du navigateur sur la page d'accueil Avalon : 7 requêtes, ~700 Ko, chargement en moins de 400 ms" loading="lazy">
+                <figcaption><strong>Mesure réelle</strong> — page d'accueil chargée en moins de 400 ms, ~700 Ko au total et 7 requêtes seulement (outils réseau du navigateur).</figcaption>
+            </figure>
         </div>
     </section>
 
@@ -363,7 +363,7 @@
             <a href="https://www.linkedin.com/in/yakhya-timurkaev-7730032ba" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="mailto:yakhyatimurkaev2006@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
-        <p class="copy">© 2026 Yakhya Timurkaev — conçu &amp; codé à la main</p>
+        <p class="copy">© 2026 Yakhya Timurkaev — conçu &amp; développé</p>
     </div>
 </footer>
 
